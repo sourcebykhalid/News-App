@@ -11,3 +11,7 @@
 body {
   background-color: #424547;
 } */
+
+body {
+  background: linear-gradient(to right, rgb(166, 165, 165), rgb(186, 186, 255));
+}
