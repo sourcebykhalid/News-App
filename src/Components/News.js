@@ -6,14 +6,14 @@ export class News extends Component {
     super();
     this.state = {
       articles: [],
-      loading: true,
+      loading: false,
       page: 1,
     };
   }
 
   async componentDidMount() {
     let url =
-      " https://newsapi.org/v2/top-headlines?country=in&apiKey=daf450dde97a4ed39f1ddd833ff44101&page=1&pagesize=6";
+      "https://newsapi.org/v2/everything?domains=wsj.com&apiKey=66346d8eb54a4edebf2cd25cb71f7639&page=1&pagesize=5";
     let data = await fetch(url);
     let parseData = await data.json();
     this.setState({
@@ -22,9 +22,9 @@ export class News extends Component {
     });
   }
   handlePrevClick = async () => {
-    let url = `https://newsapi.org/v2/top-headlines?country=in&apiKey=daf450dde97a4ed39f1ddd833ff44101&page=${
+    let url = `https://newsapi.org/v2/everything?domains=wsj.com&apiKey=66346d8eb54a4edebf2cd25cb71f7639&page=${
       this.state.page - 1
-    }&pagesize=6`;
+    }&pagesize=5`;
 
     let data = await fetch(url);
     let parseData = await data.json();
@@ -37,12 +37,11 @@ export class News extends Component {
   handleNextClick = async () => {
     if (this.state.page + 1 > Math.ceil(this.state.totalResults / 5)) {
     } else {
-      let url = `https://newsapi.org/v2/top-headlines?country=in&apiKey=daf450dde97a4ed39f1ddd833ff44101&page=${
+      let url = `https://newsapi.org/v2/everything?domains=wsj.com&apiKey=66346d8eb54a4edebf2cd25cb71f7639&page=${
         this.state.page + 1
-      }&pagesize=6`;
+      }&pagesize=5`;
       let data = await fetch(url);
       let parseData = await data.json();
-
       this.setState({
         page: this.state.page + 1,
         articles: parseData.articles,
@@ -52,7 +51,7 @@ export class News extends Component {
   render() {
     return (
       <div className="container my-3">
-        <h1>News CaFe - Get global news at one place</h1>
+        <h1 className="text-center">News CaFe - Global news at one place</h1>
         <div className="row">
           {this.state.articles.map((element) => {
             return (
@@ -77,6 +76,9 @@ export class News extends Component {
             &larr; Previous
           </button>
           <button
+            disabled={
+              this.state.page + 1 > Math.ceil(this.state.totalResults / 5)
+            }
             type="button"
             className="btn btn-dark"
             onClick={this.handleNextClick}
