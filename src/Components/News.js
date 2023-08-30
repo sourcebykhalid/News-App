@@ -75,9 +75,18 @@ export class News extends Component {
       <div className="container my-3">
         <h1
           className="text-center"
-          style={{ fontSize: "1.7rem", fontWeight: "800", margin: "1.4rem" }}
+          style={{
+            fontSize: "1.9rem",
+            fontWeight: "900",
+            margin: "1.4rem",
+            color: "black",
+            backgroundColor: "gray",
+            padding: "12px",
+            border: "1.5px solid green",
+            borderRadius: "6px",
+          }}
         >
-          News CaFe - Global Top Headlines
+          News CaFé - Global Top Headlines
         </h1>
         {this.state.loading && <Spinner />}
         <div className="row">
