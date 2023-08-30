@@ -1,6 +1,5 @@
 // import PropTypes from "prop-types";
 import React, { Component } from "react";
-
 export class NavBar extends Component {
   static propTypes = {};
 
@@ -16,9 +15,9 @@ export class NavBar extends Component {
               className="navbar-toggler"
               type="button"
               data-bs-toggle="collapse"
-              data-bs-target="/navbarSupportedContent"
+              data-bs-target="#navbarSupportedContent"
               aria-controls="navbarSupportedContent"
-              aria-expanded="false"
+              aria-expanded="true"
               aria-label="Toggle navigation"
             >
               <span className="navbar-toggler-icon"></span>
@@ -36,6 +35,36 @@ export class NavBar extends Component {
                 <li className="nav-item">
                   <a className="nav-link" href="/about">
                     About
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="/about">
+                    Business
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="/about">
+                    Entertainment
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="/about">
+                    Science
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="/about">
+                    Education
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="/about">
+                    Technology
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="/about">
+                    Health
                   </a>
                 </li>
               </ul>
