@@ -5,7 +5,7 @@ import News from "./Components/News.js";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 export default class App extends Component {
-  pageSize = 9;
+  pageSize = 5;
   render() {
     return (
       <>
@@ -14,7 +14,7 @@ export default class App extends Component {
           <Routes>
             <Route
               exact
-              path="/"
+              path="/general"
               element={
                 <News
                   key="general"
