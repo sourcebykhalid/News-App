@@ -62,13 +62,13 @@ export default class App extends Component {
             />
             <Route
               exact
-              path="/education"
+              path="/sports"
               element={
                 <News
-                  key="education"
+                  key="sports"
                   pageSize={this.pageSize}
                   country="in"
-                  category="education"
+                  category="sports"
                 />
               }
             />

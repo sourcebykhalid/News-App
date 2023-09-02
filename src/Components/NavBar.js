@@ -57,8 +57,8 @@ export class NavBar extends Component {
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/education">
-                    Education
+                  <Link className="nav-link" to="/sports">
+                    Sports
                   </Link>
                 </li>
                 <li className="nav-item">
