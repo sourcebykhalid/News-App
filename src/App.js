@@ -3,21 +3,15 @@ import React from "react";
 import NavBar from "./Components/NavBar";
 import News from "./Components/News.js";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import About from "./Components/About";
 
 const App = (props) => {
   let { pageSize } = props;
 
   return (
-    <>
+    <div className=" bg-gradient-to-tr from-slate-200 via-lime-200 to-orange-300">
       <Router>
         <NavBar />
         <Routes>
-          <Route
-            exact
-            path="/about"
-            element={<About key="about" pageSize={pageSize} category="about" />}
-          />
           <Route
             exact
             path="/general"
@@ -104,7 +98,7 @@ const App = (props) => {
           />
         </Routes>
       </Router>
-    </>
+    </div>
   );
   // }
 };

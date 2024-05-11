@@ -1,15 +1,8 @@
 import React from "react";
 
 const About = () => {
-  let myStyle = {
-    backgroundColor: "lightGreen",
-    height: "30rem",
-    width: "80%",
-    marginLeft: "10%",
-    padding: "15%",
-  };
   return (
-    <div className="text-center" style={myStyle}>
+    <div id="/about" className=" bg-slate-400 mx-auto mt-24">
       <p>
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. At fugit nemo
         non animi delectus explicabo libero cum eum odit veniam voluptate, minus

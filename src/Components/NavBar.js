@@ -1,75 +1,53 @@
-// import PropTypes from "prop-types";
+import PropTypes from "prop-types";
 import React from "react";
 import { Link } from "react-router-dom";
 
+import NewsLogo from "../newsLogo.png";
 const NavBar = () => {
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div className="container-fluid">
-          <Link className="navbar-brand" to="/">
-            <div className="logoNews">
-              <img src="newsLogo.png" alt="" />
-            </div>
-            News CaFé
-          </Link>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="true"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item">
-                <Link className="nav-link " aria-current="page" to="/">
-                  Home
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/about">
-                  About
-                </Link>
-              </li>
-
-              <li className="nav-item">
-                <Link className="nav-link" to="/business">
-                  Business
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/entertainment">
-                  Entertainment
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/science">
-                  Science
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/sports">
-                  Sports
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/technology">
-                  Technology
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/health">
-                  Health
-                </Link>
-              </li>
-            </ul>
-          </div>
+      <nav className="fixed top-0 flex flex-col sm:flex-row justify-center items-center sm:justify-between mx-auto bg-black text-lime-400 font-bold w-full z-50 px-8 py-4">
+        <div className="flex flex-col font-bold animate-pulse">
+          <img src={NewsLogo} className=" w-12" alt="" />
+          News CaFé
         </div>
+        <ul className="flex flex-wrap justify-center items-center sm:gap-x-3 gap-x-1 text-gray-400">
+          <li className="hover:text-gray-200">
+            <Link className="" to="/general">
+              General
+            </Link>
+          </li>
+          <li className="hover:text-gray-200">
+            <Link className="" to="/entertainment">
+              Entertainment
+            </Link>
+          </li>
+          <li className="hover:text-gray-200">
+            <Link className="" to="/business">
+              Business
+            </Link>
+          </li>
+          <li className="hover:text-gray-200">
+            <Link className="" to="/science">
+              Science
+            </Link>
+          </li>
+          <li className="hover:text-gray-200">
+            <Link className="" to="/sports">
+              Sports
+            </Link>
+          </li>
+          <li className="hover:text-gray-200">
+            <Link className="" to="/technology">
+              Technology
+            </Link>
+          </li>
+          <li className="hover:text-gray-200">
+            <Link className="" to="/health">
+              Health
+            </Link>
+          </li>
+        </ul>
       </nav>
     </div>
   );
