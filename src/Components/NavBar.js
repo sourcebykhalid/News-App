@@ -13,8 +13,8 @@ const NavBar = () => {
         </div>
         <ul className="flex flex-wrap justify-center items-center sm:gap-x-3 gap-x-1 text-gray-400">
           <li className="hover:text-gray-200">
-            <Link className="" to="/general">
-              General
+            <Link className="" to="/">
+              Home
             </Link>
           </li>
           <li className="hover:text-gray-200">

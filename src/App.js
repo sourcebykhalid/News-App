@@ -14,7 +14,7 @@ const App = (props) => {
         <Routes>
           <Route
             exact
-            path="/general"
+            path="/"
             element={
               <News
                 key="general"
